@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url("post.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.back {
+
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url("cork.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooDo{
+    min-height: 100px;
+    background-color: red;
+    margin: 10px;
+}
+
+.inProcess{
+    min-height: 100px;
+    background-color: yellow;
+    margin: 10px;
+
+}
+
+.done{
+    min-height: 100px;
+    background-color: green;
+    margin: 10px;
+
+}
+
+h3, h1{
+    text-align: center;
+    text-decoration: underline;
+    font-family: monospace;
+}
+
+h1{
+    margin-top: 40px;
+}
+
+#profile-img{
+    border-radius: 100%;
+}
+
+#loggyIn{
+    background-color: rgba(255, 255, 255, 0.90);
+    min-width: 300px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    min-width: 180px;
+}
+
+button {
+
+    min-width: 88px;
+}
+/*POP UP BOX*/
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  width: 50vw;
+  height: 50vh;
+  padding: 16px;
+  border: 25px solid rgba(0, 0, 0, 0.86);
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+}
+/*END OF POP UP BOX*/
+#newPost {
+    border: 1px solid black;
+    min-height: 20px;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#newPosty{
+
+    display: flex;
+    justify-content: space-around;
+    height: 37vh;
+}
+
+img{
+    height: 80px;
+    width: 80px;
+}
+
+#title{
+    display: flex;
+}
+
+#logOutBut{
+    margin-bottom: 5vh;
+}
