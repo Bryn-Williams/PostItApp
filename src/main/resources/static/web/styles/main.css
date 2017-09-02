@@ -162,5 +162,9 @@ img{
 
    -webkit-transform: translate(0, 3px); /* depth of button press */
 }
-
 /*END OF BUTTON SHIT*/
+/*COLUMNS*/
+#toDoCol, #inProcessCol, #doneCol {
+
+    min-height: 200px;
+}

@@ -42,10 +42,12 @@ $(document).ready(function(){
             $("#name").html(elUser + "'s");
 
             for(x = 0; x < data.length; x++){
-                var postItDiv = $("<div class='center'></div>");
+
+                var theNoteId = data[x].postItID;
+
+                var postItDiv = $("<div class='center' draggable='true' ondragstart='drag(event)' id='note" + theNoteId+ "'></div>");
                 var message = data[x].theMessage;
                 var theDate = new Date(data[x].theDate);
-                var theNoteId = data[x].postItID;
                 var deleteBut = $("<button class='deleteBut button' onclick='deleteMsg(" + theNoteId + ")'><span>DELETE</span></button>");
 
                 postItDiv.append("<h4>" + theDate.toDateString() + "</h4>");

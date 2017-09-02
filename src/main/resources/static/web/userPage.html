@@ -33,13 +33,13 @@
 
 
     <div class="row">
-        <div class="col-sm-4" id="toDoCol">
+        <div class="col-sm-4" id="toDoCol" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h3>TO DO!!</h3>
         </div>
-        <div class="col-sm-4" id="inProcessCol">
+        <div class="col-sm-4" id="inProcessCol" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h3>IN PROCESS...</h3>
         </div>
-        <div class="col-sm-4" id="doneCol">
+        <div class="col-sm-4" id="doneCol" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h3>WE DID IT!!</h3>
         </div>
     </div>
@@ -54,12 +54,10 @@
 </div>
 
 
-
-
 <!--JAVASCRIPT FILES-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="scripts/userPage.js" type="text/javascript"></script>
-
+<script src="scripts/dragdrop.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
