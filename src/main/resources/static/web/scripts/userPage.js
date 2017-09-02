@@ -45,7 +45,7 @@ $(document).ready(function(){
 
                 var theNoteId = data[x].postItID;
 
-                var postItDiv = $("<div class='center' draggable='true' ondragstart='drag(event)' id='note" + theNoteId+ "'></div>");
+                var postItDiv = $("<div class='center draggable-item'></div>");
                 var message = data[x].theMessage;
                 var theDate = new Date(data[x].theDate);
                 var deleteBut = $("<button class='deleteBut button' onclick='deleteMsg(" + theNoteId + ")'><span>DELETE</span></button>");
