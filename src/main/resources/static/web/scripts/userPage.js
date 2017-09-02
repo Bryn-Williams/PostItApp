@@ -75,6 +75,8 @@ $(document).ready(function(){
                     doneDiv.append(postItDiv);
                 }
             }
+
+            $("h3").css( "pointer-events", "none");
     }
 
     function logOut(){

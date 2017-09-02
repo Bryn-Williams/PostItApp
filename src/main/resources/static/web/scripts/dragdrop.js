@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
 });
 
 $( init );
@@ -10,3 +11,4 @@ function init() {
        stack: '.connected-sortable div'
     }).disableSelection();
 }
+
