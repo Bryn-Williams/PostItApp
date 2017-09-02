@@ -31,20 +31,20 @@ html, body {
 
 .tooDo{
     min-height: 100px;
-    background-color: red;
+    background-color: rgba(212, 1, 1, 0.53);
     margin: 10px;
 }
 
 .inProcess{
     min-height: 100px;
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.53);
     margin: 10px;
 
 }
 
 .done{
     min-height: 100px;
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.53);
     margin: 10px;
 
 }
@@ -53,6 +53,7 @@ h3, h1{
     text-align: center;
     text-decoration: underline;
     font-family: monospace;
+    font-weight: 600;
 }
 
 h1{
@@ -123,3 +124,43 @@ img{
 #logOutBut{
     margin-bottom: 5vh;
 }
+
+/*BUTTON SHIT*/
+.button {
+  outline: none;
+
+  margin-bottom: 5px;
+
+  -webkit-border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+}
+
+.button span {
+
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+
+    -webkit-border-radius: 5px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    display: inline-block;
+    padding: 1px 5px 1px 5px;
+
+    color: #3A474D;
+    font-family: monospace;
+    font-size: 20px;
+
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+}
+.button span:hover {
+  outline: none;
+
+     color: blue;
+     cursor: pointer;
+}
+
+.button:active span{
+  outline: none;
+
+   -webkit-transform: translate(0, 3px); /* depth of button press */
+}
+
+/*END OF BUTTON SHIT*/

@@ -46,7 +46,7 @@ $(document).ready(function(){
                 var message = data[x].theMessage;
                 var theDate = new Date(data[x].theDate);
                 var theNoteId = data[x].postItID;
-                var deleteBut = $("<button class='deleteBut' onclick='deleteMsg(" + theNoteId + ")'>DELETE</button>");
+                var deleteBut = $("<button class='deleteBut button' onclick='deleteMsg(" + theNoteId + ")'><span>DELETE</span></button>");
 
                 postItDiv.append("<h4>" + theDate.toDateString() + "</h4>");
                 postItDiv.append("<p>" + message + "</p>");
