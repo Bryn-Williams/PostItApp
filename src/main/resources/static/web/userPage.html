@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
 </head>
 <body>
 
@@ -25,7 +26,7 @@
                 <div class="center" id="newPosty">
                     <h4>Enter Your Reminder below....</h4>
                     <textarea id="textArea" rows="6" cols="50" placeholder="here..."></textarea>
-                    <button id="saveNewMsg">Save new reminder</button>
+                    <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button id="saveNewMsg">Save new reminder</button></a>
                     <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
                 </div>
             </div>

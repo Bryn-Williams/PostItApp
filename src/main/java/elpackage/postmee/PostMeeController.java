@@ -96,8 +96,27 @@ public class PostMeeController {
         postItRepo.delete(toBeDeleted);
 
         return new ResponseEntity<>("You deleted the message, boom!", HttpStatus.ACCEPTED);
-
     }
+
+    //METHOD TO CHANGE THE STATUS!!
+    @RequestMapping(path = "/changeTheStatus", method = RequestMethod.POST)
+    public ResponseEntity<Map<String, Object>> changeStatus(@RequestParam Long noteId, @RequestParam String status){
+
+        PostItNote toChangeStatus = postItRepo.findByNoteId(noteId);
+        toChangeStatus.setStatus(status);
+        postItRepo.save(toChangeStatus);
+
+        Map<String, Object> dto = new LinkedHashMap<>();
+
+        dto.put("theMessage", toChangeStatus.getTheMessage());
+        dto.put("theDate", toChangeStatus.getTheDate());
+        dto.put("status", toChangeStatus.getStatus());
+        dto.put("postItID", toChangeStatus.getNoteId());
+        dto.put("theUser", toChangeStatus.getaAUser().getUserName());
+
+        return new ResponseEntity<>(dto, HttpStatus.ACCEPTED);
+    }
+
 
 
 }
