@@ -33,20 +33,27 @@ html, body {
     min-height: 100px;
     background-color: rgba(212, 1, 1, 0.53);
     margin: 10px;
+    border-radius: 7px;
+    padding: 5px;
+    overflow: overlay;
 }
 
 .inProcess{
     min-height: 100px;
     background-color: rgba(255, 255, 0, 0.53);
     margin: 10px;
-
+    border-radius: 7px;
+    padding: 5px;
+    overflow: overlay;
 }
 
 .done{
     min-height: 100px;
     background-color: rgba(0, 128, 0, 0.53);
     margin: 10px;
-
+    border-radius: 7px;
+    padding: 5px;
+    overflow: overlay;
 }
 
 h3, h1{
@@ -54,10 +61,16 @@ h3, h1{
     text-decoration: underline;
     font-family: monospace;
     font-weight: 600;
+    margin-top: 10px;
+
 }
 
 h1{
-    margin-top: 40px;
+    margin-top: 50px;
+}
+
+h4{
+   text-decoration: underline;
 }
 
 #profile-img{
@@ -70,16 +83,14 @@ h1{
     min-height: 400px;
     display: flex;
     justify-content: space-around;
+    border-radius: 30px;
 }
 
 input{
     min-width: 180px;
 }
 
-button {
 
-    min-width: 88px;
-}
 /*POP UP BOX*/
 
 .white_content {
@@ -113,8 +124,18 @@ button {
 }
 
 img{
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
+}
+
+#trash{
+    height: 20px;
+    width:20px;
+}
+
+#profile-img{
+    height: 120px;
+    width: 120px;
 }
 
 #title{

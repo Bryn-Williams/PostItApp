@@ -22,7 +22,7 @@ public class PostMeeController {
     @RequestMapping("/messages/{xxx}")
     public List<Map<String, Object>> displayPostIts(@PathVariable String xxx, Authentication authentication){
 
-        List<Map<String, Object>> theDto = new ArrayList<>();
+        List<Map<String, Object>> theDto = new LinkedList<>();
 
         List<PostItNote> listOfPostIts = postItRepo.findAll();
         Set<PostItNote> setOfPostIts = new HashSet<PostItNote>(listOfPostIts);
@@ -66,7 +66,7 @@ public class PostMeeController {
 
     //METHOD TO CREATE AND SAVE NEW MESSAGES
     @RequestMapping(path="/saveMessage", method = RequestMethod.POST)
-    public ResponseEntity<String> saveNewMessage(@RequestParam String theMessage, @RequestParam String loggedUser){
+    public ResponseEntity<Map<String, Object>> saveNewMessage(@RequestParam String theMessage, @RequestParam String loggedUser){
 
         String status = "toDo";
         PostItNote newMsg = new PostItNote(theMessage, status);
@@ -77,7 +77,14 @@ public class PostMeeController {
 
         postItRepo.save(newMsg);
 
-        return new ResponseEntity<>("You created a new Message, boom!", HttpStatus.ACCEPTED);
+        Map<String, Object> dto = new LinkedHashMap<>();
+
+        dto.put("theDate", newMsg.getTheDate());
+        dto.put("theMessage", newMsg.getTheMessage());
+        dto.put("postItID", newMsg.getNoteId());
+        dto.put("status", newMsg.getStatus());
+
+        return new ResponseEntity<Map<String, Object>>(dto, HttpStatus.ACCEPTED);
     }
 
     //METHOD TO DELETE MESSAGES

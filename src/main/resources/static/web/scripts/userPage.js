@@ -45,10 +45,10 @@ $(document).ready(function(){
 
                 var theNoteId = data[x].postItID;
 
-                var postItDiv = $("<div class='center draggable-item'></div>");
+                var postItDiv = $("<div id='" + theNoteId + "' class='center draggable-item'></div>");
                 var message = data[x].theMessage;
                 var theDate = new Date(data[x].theDate);
-                var deleteBut = $("<button class='deleteBut button' onclick='deleteMsg(" + theNoteId + ")'><span>DELETE</span></button>");
+                var deleteBut = $("<button class='deleteBut button' onclick='deleteMsg(" + theNoteId + ")'><img id='trash' src='styles/delete.png'></button>");
 
                 postItDiv.append("<h4>" + theDate.toDateString() + "</h4>");
                 postItDiv.append("<p>" + message + "</p>");
@@ -75,8 +75,6 @@ $(document).ready(function(){
                     doneDiv.append(postItDiv);
                 }
             }
-
-            $("h3").css( "pointer-events", "none");
     }
 
     function logOut(){
@@ -92,10 +90,12 @@ $(document).ready(function(){
         var theMsg = $("#textArea").val();
 
         $.post("/api/saveMessage", { theMessage: theMsg, loggedUser: theUser })
-        .done(function(){
+        .done(function(dto){
 
-                console.log("message created!");
-                window.location.reload();
+                var data = [];
+                data.push(dto);
+
+                fillInUserPage(data, theUser);
         });
     };
 
@@ -103,8 +103,8 @@ $(document).ready(function(){
 
         $.post("/api/deleteMessage", { noteId : noteIdd })
         .done(function(){
-             console.log("deleted");
-             window.location.reload();
+            $("#" + noteIdd).remove();
         });
+
     };
 
