@@ -12,7 +12,6 @@ html, body {
 }
 
 .back {
-
     height: 100%;
     background-repeat: no-repeat;
     background-image: url("cork.jpg");
@@ -31,7 +30,8 @@ html, body {
 
 .tooDo{
     min-height: 100px;
-    background-color: rgba(212, 1, 1, 0.53);
+    border: 7px solid red;
+    background-color: rgba(255, 255, 255, 0.69);
     margin: 10px;
     border-radius: 7px;
     padding: 5px;
@@ -40,7 +40,8 @@ html, body {
 
 .inProcess{
     min-height: 100px;
-    background-color: rgba(255, 255, 0, 0.53);
+    border: 7px solid yellow;
+    background-color: rgba(255, 255, 255, 0.69);
     margin: 10px;
     border-radius: 7px;
     padding: 5px;
@@ -49,7 +50,8 @@ html, body {
 
 .done{
     min-height: 100px;
-    background-color: rgba(0, 128, 0, 0.53);
+    border: 7px solid green;
+    background-color: rgba(255, 255, 255, 0.69);
     margin: 10px;
     border-radius: 7px;
     padding: 5px;
@@ -58,8 +60,7 @@ html, body {
 
 h3, h1{
     text-align: center;
-    text-decoration: underline;
-    font-family: monospace;
+    font-family: inherit;
     font-weight: 600;
     margin-top: 10px;
 
@@ -188,5 +189,9 @@ img{
 #toDoCol, #inProcessCol, #doneCol {
 
     min-height: 150px;
+}
+
+p {
+    font-size: large;
 }
 

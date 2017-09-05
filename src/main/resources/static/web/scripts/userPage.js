@@ -50,7 +50,7 @@ $(document).ready(function(){
                 var theDate = new Date(data[x].theDate);
                 var deleteBut = $("<button class='deleteBut button' onclick='deleteMsg(" + theNoteId + ")'><img id='trash' src='styles/delete.png'></button>");
 
-                postItDiv.append("<h4>" + theDate.toDateString() + "</h4>");
+                postItDiv.append("<h3>" + theDate.toDateString() + "</h3>");
                 postItDiv.append("<p>" + message + "</p>");
                 postItDiv.append(deleteBut)
 
