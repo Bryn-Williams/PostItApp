@@ -18,6 +18,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -96,6 +98,17 @@ class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
 		};
 	}
 }
+
+@Configuration
+class MvcConfig extends WebMvcConfigurerAdapter {
+
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/").setViewName("post.html");
+	}
+
+}
+
 
 @Configuration
 @EnableWebSecurity
