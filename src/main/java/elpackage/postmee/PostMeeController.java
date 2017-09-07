@@ -24,7 +24,7 @@ public class PostMeeController {
 
         List<Map<String, Object>> theDto = new LinkedList<>();
 
-        List<PostItNote> listOfPostIts = postItRepo.findAll();
+        List<PostItNote> listOfPostIts = (List<PostItNote>) postItRepo.findAll();
         Set<PostItNote> setOfPostIts = new HashSet<PostItNote>(listOfPostIts);
 
         //GET AUTHENTICATED PLAYER!!
