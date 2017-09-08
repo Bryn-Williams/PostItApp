@@ -106,7 +106,6 @@ class MvcConfig extends WebMvcConfigurerAdapter {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("post.html");
 	}
-
 }
 
 
