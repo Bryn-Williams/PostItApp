@@ -81,7 +81,7 @@ $(document).ready(function(){
 
         $.post("/appp/logout").done(function() {
             console.log("logged out");
-            window.open("/web/theMainPage.html","_self")
+            window.open("/theMainPage.html","_self")
         })
     }
 
