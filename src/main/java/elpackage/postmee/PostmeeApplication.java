@@ -115,15 +115,16 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
+				.antMatchers("/").permitAll()
 				.antMatchers("/web/theMainPage.html").permitAll()
 				.antMatchers("/web/scripts/**").permitAll()
 				.antMatchers("/web/styles/**").permitAll()
 				.antMatchers("/api/createUser").permitAll()
 				.antMatchers("/appp/login").permitAll()
 				.antMatchers("/rest/**").denyAll()
-				.anyRequest().fullyAuthenticated()
-				.and()
-				.formLogin();
+				.anyRequest().fullyAuthenticated();
+				//.and()
+				//.formLogin();
 
 		http.formLogin()
 		    	.usernameParameter("userName")
