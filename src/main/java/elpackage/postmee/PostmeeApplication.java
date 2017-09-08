@@ -109,6 +109,7 @@ class MvcConfig extends WebMvcConfigurerAdapter {
 }
 
 
+
 @Configuration
 @EnableWebSecurity
 class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -119,8 +120,6 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/web/theMainPage.html").permitAll()
 				.antMatchers("/web/scripts/**").permitAll()
 				.antMatchers("/web/styles/**").permitAll()
-				.antMatchers("/scripts/*").permitAll()
-				.antMatchers("/styles/*").permitAll()
 				.antMatchers("/api/createUser").permitAll()
 				.antMatchers("/appp/login").permitAll()
 				.antMatchers("/rest/**").denyAll()
