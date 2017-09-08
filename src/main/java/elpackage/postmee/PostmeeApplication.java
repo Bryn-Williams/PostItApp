@@ -104,7 +104,7 @@ class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("forward:/web/theMainPage.html");
+		registry.addViewController("/").setViewName("/web/theMainPage.html");
 	}
 }
 
@@ -119,6 +119,8 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/web/theMainPage.html").permitAll()
 				.antMatchers("/web/scripts/**").permitAll()
 				.antMatchers("/web/styles/**").permitAll()
+				.antMatchers("scripts/*").permitAll()
+				.antMatchers("styles/*").permitAll()
 				.antMatchers("/api/createUser").permitAll()
 				.antMatchers("/appp/login").permitAll()
 				.antMatchers("/rest/**").denyAll()
